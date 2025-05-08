@@ -447,9 +447,11 @@ export class GitHub {
       cursor,
       owner: this.repository.owner,
       repo: this.repository.repo,
-      num: 15,
+      num: 25,
+      // num: 15, // workaround value to make it work
       targetBranch,
-      maxFilesChanged: 50, // max is 100
+      maxFilesChanged: 100, // max is 100
+      // maxFilesChanged: 50, // workaround value to make it work
     };
     const response = await this.graphqlRequest({
       query,
